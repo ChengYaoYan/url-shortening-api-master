@@ -55,17 +55,30 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section search-section">
       <div class="section-center relative-box">
-        <div class="absolute-box">
+        <div class="url-search-container">
           <form class="url-search-box">
-            <input
-              class="search-input"
-              type="text"
-              placeholder="Shorten a links here..."
-            />
-            <button class="btn search-btn">shorten it!</button>
+            <div class="search-box-container">
+              <input
+                id="search-box"
+                class="search-input"
+                type="text"
+                placeholder="Shorten a links here..."
+              />
+            </div>
+            <button id="search-btn" class="btn search-btn">shorten it!</button>
           </form>
+          <!-- search result -->
+          <!-- 
+          <div class="search-result-box">
+            <p class="originURL">www.google.com</p>
+            <div class="result-data-box">
+              <p class="shortenLink">https://resLink</p>
+              <button class="btn copy-btn">copy</button>
+            </div>
+          </div> 
+          -->
         </div>
       </div>
     </section>
@@ -174,6 +187,8 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="./script.js" />
+    <script src="./toggle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./shortenLink.js"></script>
   </body>
 </html>
