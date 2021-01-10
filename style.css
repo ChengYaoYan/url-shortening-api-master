@@ -320,6 +320,15 @@ img.illustration-image {
   margin-bottom: 1rem;
   transition: var(--transition);
 }
+.search-box-container::before {
+  position: absolute;
+  top: -1rem;
+  display: none;
+  content: "Invalid URL";
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--clr-red);
+}
 .search-box-container::after {
   position: absolute;
   bottom: -1.3rem;
@@ -338,6 +347,10 @@ img.illustration-image {
   font-size: 0.9rem;
   font-weight: 700;
   transition: var(--transition);
+}
+/* show error message */
+.search-box-container.error::before {
+  display: block;
 }
 /* show alert message */
 .search-box-container.alert {
@@ -370,6 +383,9 @@ img.illustration-image {
   width: 100%;
 }
 /* search result data */
+.result-container {
+  width: 100%;
+}
 .search-result-box {
   width: 100%;
   background-color: #fff;
@@ -383,6 +399,7 @@ img.illustration-image {
   text-align: left;
   border-bottom: 1px solid var(--clr-gray-light);
   color: var(--clr-very-dark-violet);
+  overflow-x: auto;
 }
 .result-data-box {
   width: 100%;
@@ -430,9 +447,11 @@ img.illustration-image {
   .search-btn {
     flex: 1;
   }
-  .search-result-box {
+  .result-container {
     width: 90%;
     max-width: 900px;
+  }
+  .search-result-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
